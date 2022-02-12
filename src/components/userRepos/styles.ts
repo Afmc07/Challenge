@@ -15,6 +15,7 @@ export const NumberContainer = styled.div`
     width: 100px;
     height: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     transiton: linear 0.2s;
@@ -36,6 +37,6 @@ export const NumberContainer = styled.div`
     &:hover{
         cursor: pointer;
         transiton: linear 0.2s;
-        transform: scale(1.2)
+        transform: scale(1.2);
     }
 `
