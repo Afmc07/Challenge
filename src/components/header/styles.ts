@@ -42,7 +42,7 @@ export const HeadInputCont = styled.div`
 `
 
 export const HeadIn = styled.input`
-    width: 150px;
+    width: 200px;
     height: 30px;
     border-radius: 15px;
     border: solid;
