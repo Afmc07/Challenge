@@ -8,4 +8,5 @@ export const Container = styled.main`
     align-items: center;
     justify-content center;
     flex-direction: column;
+    overflow-y: scroll;
 `

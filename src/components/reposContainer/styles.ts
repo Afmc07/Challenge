@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.section`
     width: 500px;
-    height: 425px;
+    height: 465px;
     border-radius: 10px;
     border-style: solid;
     border-color: #ADD8E6;
@@ -33,16 +33,24 @@ export const ListOfReposContainer = styled.div`
 
 export const Repo = styled.h2`
     width: 95%;
-    height: 80px;
-    border-radius: 5px;
+    height: 160px;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-style: solid;
     border-color: #ADD8E6;
+    color: #4f4d4d;
 
     h2 {
         font-size: 15px;
+        width: 100%;
+        overflow: hidden;
+        color: #4f4d4d;
+        text-decoration-line: underline;
+    }
+
+    h3{
+        font-size: 13px;
         width: 100%;
         overflow: hidden;
         color: #4f4d4d;
@@ -56,10 +64,55 @@ export const Repo = styled.h2`
         height: 30px;
         overflow: hidden;
         line-height: 1.3;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
+    h2:hover{
+        cursor: pointer;
+    }
+`
+
+export const ButSec = styled.section`
+    width: 100px;
+    height: 31px;
+    margin-bottom: 3px;
+`
+
+export const Back = styled.button`
+    border-style: solid;
+    border-color: #ADD8E6;
+    border-radius: 15px;
+    background: #ADD8E6;
+    width: 80px;
+    height: 30px;
+    color: #FFF;
+    transition: ease .2s;
+    margin-top: 3px;
+    margin-left: 3px;
+
     &:hover{
+        transform: scale(1.2);
+        transition: ease 0.2s;
+        background: #4f4d4d;
+        cursor: pointer;
+    }
+`
+
+export const Fav = styled.button`
+    border-style: solid;
+    background: #4f4d4d;
+    border-radius: 10px;
+    background: #4f4d4d;
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+    transition: ease .2s;
+    float: right;
+
+    &:hover{
+        transform: scale(1.2);
+        transition: ease 0.2s;
+        background: #FFD73B;
         cursor: pointer;
     }
 `

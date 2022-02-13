@@ -10,6 +10,8 @@ import { context } from "../context";
 
 export default function Home(){
     const ctx = useContext(context);
+    console.log("Home");
+    console.log(ctx.favs);
     return(
         <Container>
             <Header/>
@@ -17,8 +19,14 @@ export default function Home(){
             <Main>
                 <UserPfp url={ctx.userData?.avatar_url} altText={ctx.userData?.login}/>
                 <UserName name={ctx.userData?.name}/>
-                <UserRepo repos={ctx.userData?.public_repos}/>
+                <UserRepo repos={ctx.userData?.public_repos} favs={ctx.favs}/>
             </Main>
+
+            <Main>
+                
+            </Main>
+
+            
 
         </Container>
     )

@@ -7,9 +7,11 @@ import { context } from "../context";
 
 const Repos = (props: any) => {
     const Ctxt = useContext(context); 
+    console.log("Repos")
+    console.log(Ctxt.favs)
     return (
         <Container>
-            <ReposContainer name={Ctxt.userData?.name} repos={[Ctxt.repos]}/>
+            <ReposContainer name={Ctxt.userData?.name} repos={[Ctxt.repos]} favs={Ctxt.favs}/>
         </Container>
     );
 };
