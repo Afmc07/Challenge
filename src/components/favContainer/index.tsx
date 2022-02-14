@@ -44,7 +44,7 @@ const FavsContainer = (props: any) =>{
                 {(ffs).map((repo: { html_url: string; id: any; name: string | undefined; description: string | undefined; stargazers_count: string; forks_count: string; owner: any}) =>(
                     <Repo key={repo?.id}>
                         {repo?.name} by {repo?.owner.login}
-                        <h2 onClick={() => window.location.href= repo?.html_url}>Go to Repository</h2> <UnFav onClick={() => click(repo, ffs, "/")}><FiFrown size={15}/></UnFav>
+                        <h2 onClick={() => window.open(repo?.html_url, "_blank")}>Go to Repository</h2> <UnFav onClick={() => click(repo, ffs, "/")}><FiFrown size={15}/></UnFav>
                         <h3>stars: {repo?.stargazers_count} forks: {repo?.forks_count}</h3>
                         <p>{repo?.description}</p>
                     </Repo>

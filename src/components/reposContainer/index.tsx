@@ -28,8 +28,15 @@ const ReposContainer = (props: any) =>{
             var aux = [];
         }
         
-        aux.push(repo);
-        ctx.setFavs(aux)
+        if(!aux.includes(repo)){
+            aux.push(repo);
+            ctx.setFavs(aux);
+            alert(`Repository "${repo.name}" has been Favorited.`)
+        }
+        else{
+            alert("Item is already favorited.")
+        }
+        
     }
 
     return (
@@ -41,7 +48,7 @@ const ReposContainer = (props: any) =>{
                 {(props?.repos[0]).map((repo: { html_url: string; id: any; name: string | undefined; description: string | undefined; stargazers_count: string; forks_count: string;}) =>(
                     <Repo key={repo?.id}>
                         {repo?.name}
-                        <h2 onClick={() => window.location.href= repo?.html_url}>Go to Repository</h2> <Fav onClick={() => newFav(repo, props.favs)}><FiStar size={15}/></Fav>
+                        <h2 onClick={() => window.open(repo?.html_url, "_blank")}>Go to Repository</h2> <Fav onClick={() => newFav(repo, props.favs)}><FiStar size={15}/></Fav>
                         <h3>stars: {repo?.stargazers_count} forks: {repo?.forks_count}</h3>
                         <p>{repo?.description}</p>
                     </Repo>
