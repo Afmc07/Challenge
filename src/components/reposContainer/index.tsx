@@ -30,8 +30,6 @@ const ReposContainer = (props: any) =>{
         
         aux.push(repo);
         ctx.setFavs(aux)
-        console.log("Favs")
-        console.log(ctx.favs)
     }
 
     return (
@@ -43,7 +41,7 @@ const ReposContainer = (props: any) =>{
                 {(props?.repos[0]).map((repo: { html_url: string; id: any; name: string | undefined; description: string | undefined; stargazers_count: string; forks_count: string;}) =>(
                     <Repo key={repo?.id}>
                         {repo?.name}
-                        <h2 onClick={() => window.location.href= repo?.html_url}>Go to Repository</h2> <Fav><FiStar size={15} onClick={() => newFav(repo, props.favs)}/></Fav>
+                        <h2 onClick={() => window.location.href= repo?.html_url}>Go to Repository</h2> <Fav onClick={() => newFav(repo, props.favs)}><FiStar size={15}/></Fav>
                         <h3>stars: {repo?.stargazers_count} forks: {repo?.forks_count}</h3>
                         <p>{repo?.description}</p>
                     </Repo>
